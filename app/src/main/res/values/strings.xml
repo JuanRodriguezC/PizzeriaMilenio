@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Pizzeria Milenio</string>
+    <string name="intent1_name">Registrar Usuario</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="prompt_password2">Repite la contraseña</string>
+    <string name="prompt_usuario">Nombre de Usuario</string>
+    <string name="prompt_fecNac">Fecha de Nacimiento (dd/mm/yyyy)</string>
+    <string name="prompt_sexo">Género</string>
+    <string-array name="opciones">
+        <item>Género</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+    <string name="action_entrar">Entrar</string>
+    <string name="action_registrarse">Registrarse</string>
+    <string name="action_enviarDatos">Enviar Datos</string>
+    <string name="action_borrarDatos">Borrar Datos</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Email incorrecto</string>
+    <string name="error_invalid_password">Contraseña demasiado corta</string>
+    <string name="error_incorrect_password">Contraseña incorrecta</string>
+    <string name="error_field_required">Campo requerido</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>
