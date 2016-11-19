@@ -10,6 +10,8 @@
     <string name="prompt_usuario">Nombre de Usuario</string>
     <string name="prompt_fecNac">Fecha de Nacimiento (dd/mm/yyyy)</string>
     <string name="prompt_sexo">Género</string>
+    <string name="prompt_tema">Tema Principal</string>
+    <string name="prompt_mensaje">Inserte su mensaje...</string>
     <string-array name="opciones">
         <item>Género</item>
         <item>Hombre</item>
@@ -19,6 +21,8 @@
     <string name="action_registrarse">Registrarse</string>
     <string name="action_enviarDatos">Enviar Datos</string>
     <string name="action_borrarDatos">Borrar Datos</string>
+    <string name="action_enviarForo">Enviar Mensaje</string>
+    <string name="action_actualizarMensajes">Actualizar Lista Mensajes</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="action_comida">MENÚ</string>
     <string name="action_ofertas">Ofertas</string>

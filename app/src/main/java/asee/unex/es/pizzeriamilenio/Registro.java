@@ -105,12 +105,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                  break;
             case R.id.buttonBorrarDatos:
                     borrarDatos();
-             //    hiloconexion = new ObtenerWebService()
-                // hiloconexion.execute(borrar,"5",editTextUsuario.getText().toString());   // Parámetros que recibe doInBackground
-            //    hiloconexion = new ObtenerWebService();
-            //    String cadenallamada = obtenerPorID + "?correo=" + editTextEmail.getText().toString();
-            //    hiloconexion.execute(cadenallamada,"2");
-
                 break;
             default:
                 break;

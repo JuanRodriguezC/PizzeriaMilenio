@@ -102,7 +102,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/action_enviarDatos"
             android:textColor="#fbff00"
-            app:backgroundTint="@color/colorButton"
+            android:backgroundTint="@color/colorButton"
             android:textStyle="bold" />
 
         <Button
@@ -113,7 +113,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/action_borrarDatos"
             android:textColor="#fbff00"
-            app:backgroundTint="@color/colorButton"
+            android:backgroundTint="@color/colorButton"
             android:textStyle="bold" />
 
     </LinearLayout>

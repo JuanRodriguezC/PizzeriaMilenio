@@ -84,16 +84,16 @@ public class Home extends AppCompatActivity {
             }
             }
         });
-/*
+
         buttonForo = (Button) findViewById(R.id.buttonForo);
         buttonForo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentForo = new Intent();
-                intentForo.setClass(Home.this,Registro.class);  //cambiar
+                intentForo.setClass(Home.this,Foro.class);  //cambiar
                 startActivity(intentForo);
             }
-        });*/
+        });
     }
 
     private void alertGPSDesactivado(){

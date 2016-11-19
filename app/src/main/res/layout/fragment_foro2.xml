@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#cfcf3030">
+
+
+    <Button
+        android:id="@+id/buttonActualizartabla"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/action_actualizarMensajes"
+        android:textColor="#fbff00"
+        android:backgroundTint="@color/colorButton"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_gravity="start"
+        android:divider="#fffcfc"
+        android:dividerHeight="1.5dp"
+        android:cacheColorHint="#111"
+        android:choiceMode="singleChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listaMensajes"
+        android:paddingTop="60dp" />
+
+</RelativeLayout>

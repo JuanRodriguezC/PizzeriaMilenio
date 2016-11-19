@@ -54,7 +54,8 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#8b5a6b">
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
@@ -63,13 +64,19 @@
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColorLink="?attr/actionMenuTextColor"
+                    android:textColorHint="@android:color/background_dark"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHighlight="@color/icons"
+                    android:textCursorDrawable="@color/icons" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorButton">
 
                 <EditText
                     android:id="@+id/password"
@@ -81,7 +88,11 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColor="@color/colorButton"
+                    android:textColorHighlight="@color/colorButton"
+                    android:textColorHint="@color/colorButton"
+                    android:textColorLink="@color/colorButton" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -93,7 +104,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_entrar"
                 android:textColor="#fbff00"
-                app:backgroundTint="@color/colorButton"
+                android:backgroundTint="@color/colorButton"
                 android:textStyle="bold"/>
 
             <Button
@@ -104,7 +115,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_registrarse"
                 android:textColor="#fbff00"
-                app:backgroundTint="@color/colorButton"
+                android:backgroundTint="@color/colorButton"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

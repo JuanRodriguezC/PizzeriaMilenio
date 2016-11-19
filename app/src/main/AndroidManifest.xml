@@ -47,5 +47,10 @@
             android:name=".Ofertas"
             android:label="@string/intent2_name">
         </activity>
+        <activity
+            android:theme="@style/MiTema"
+            android:name=".Foro"
+            android:label="@string/intent2_name">
+        </activity>
     </application>
 </manifest>
