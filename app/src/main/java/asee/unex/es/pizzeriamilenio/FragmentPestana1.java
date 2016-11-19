@@ -74,7 +74,7 @@ public class FragmentPestana1 extends Fragment {
             public void onClick(View view){
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Ingredientes");
-                builder.setMessage("Salsa de queso, Bacon, Cebolla y Orégano");
+                builder.setMessage("Salsa De Queso, Bacon, Cebolla y Orégano");
                         builder.setNegativeButton("Volver",null);
                 Dialog dialog = builder.create();
                 dialog.show();
@@ -123,7 +123,7 @@ public class FragmentPestana1 extends Fragment {
             public void onClick(View view){
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Ingredientes");
-                builder.setMessage("Tomate, Mozzarella, Bacon, Salchichas frankfurt y Orégano");
+                builder.setMessage("Tomate, Mozzarella, Bacon, Salchichas Frankfurt y Orégano");
                         builder.setNegativeButton("Volver",null);
                 Dialog dialog = builder.create();
                 dialog.show();
@@ -135,8 +135,8 @@ public class FragmentPestana1 extends Fragment {
             public void onClick(View view){
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Ingredientes");
-                builder.setMessage("Tomate, Mozzarella, Queso de oveja, York, Jamón ibérico, Lomo ibérico, " +
-                        "Chorizo ibérico y Orégano");
+                builder.setMessage("Tomate, Mozzarella, Queso De oveja, York, Jamón Ibérico, Lomo Ibérico, " +
+                        "Chorizo Ibérico y Orégano");
                         builder.setNegativeButton("Volver",null);
                 Dialog dialog = builder.create();
                 dialog.show();
@@ -172,7 +172,7 @@ public class FragmentPestana1 extends Fragment {
             public void onClick(View view){
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Ingredientes");
-                builder.setMessage("Tomate, Mozzarella, Bacon, Salami, Atún, Cahmpiñones, Anchoas y Orégano");
+                builder.setMessage("Tomate, Mozzarella, Bacon, Salami, Atún, Champiñones, Anchoas y Orégano");
                         builder.setNegativeButton("Volver",null);
                 Dialog dialog = builder.create();
                 dialog.show();
@@ -208,7 +208,7 @@ public class FragmentPestana1 extends Fragment {
             public void onClick(View view){
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Ingredientes");
-                builder.setMessage("Tomate, Mozzarella, Champiñones, Alcachofas, ESpárragos, Pimientos y Orégano");
+                builder.setMessage("Tomate, Mozzarella, Champiñones, Alcachofas, Espárragos, Pimientos y Orégano");
                         builder.setNegativeButton("Volver",null);
                 Dialog dialog = builder.create();
                 dialog.show();
@@ -220,7 +220,7 @@ public class FragmentPestana1 extends Fragment {
             public void onClick(View view){
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Ingredientes");
-                builder.setMessage("Tomate, Mozzarella, York' y Orégano");
+                builder.setMessage("Tomate, Mozzarella, York y Orégano");
                         builder.setNegativeButton("Volver",null);
                 Dialog dialog = builder.create();
                 dialog.show();

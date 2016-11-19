@@ -1,6 +1,7 @@
 package asee.unex.es.pizzeriamilenio;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -30,16 +31,6 @@ public class Home extends AppCompatActivity {
             }
         });
 /*
-        buttonOfertas = (Button) findViewById(R.id.buttonOfertas);
-        buttonOfertas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentOfertas = new Intent();
-                intentOfertas.setClass(Home.this,Registro.class);  //cambiar
-                startActivity(intentOfertas);
-            }
-        });
-
         buttonReserva = (Button) findViewById(R.id.buttonReserva);
         buttonReserva.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,17 +40,32 @@ public class Home extends AppCompatActivity {
                 startActivity(intentReserva);
             }
         });
+*/
+        buttonOfertas = (Button) findViewById(R.id.buttonOfertas);
+        buttonOfertas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentOfertas = new Intent();
+                intentOfertas.setClass(Home.this,Ofertas.class);  //cambiar
+                startActivity(intentOfertas);
+            }
+        });
+
+
 
         buttonLocalizacion = (Button) findViewById(R.id.buttonLocalizacion);
         buttonLocalizacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLocalizacion = new Intent();
-                intentLocalizacion.setClass(Home.this,Registro.class);  //cambiar
+        //        Intent intentLocalizacion = new Intent();
+        //        intentLocalizacion.setClass(Home.this,Registro.class);  //cambiar
+        //        startActivity(intentLocalizacion);
+                Intent intentLocalizacion = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("geo:38.863257773424785,-6.102275691347359?z=16&q=38.863257773424785,-6.102275691347359(PizzeriaMilenio)"));
+                intentLocalizacion.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
                 startActivity(intentLocalizacion);
             }
         });
-
+/*
         buttonForo = (Button) findViewById(R.id.buttonForo);
         buttonForo.setOnClickListener(new View.OnClickListener() {
             @Override

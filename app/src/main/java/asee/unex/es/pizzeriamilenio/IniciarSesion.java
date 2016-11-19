@@ -85,7 +85,11 @@ public class IniciarSesion extends AppCompatActivity implements LoaderCallbacks<
         buttonEntrar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                //attemptLogin();
+                Intent intentCarga = new Intent();
+                intentCarga.setClass(IniciarSesion.this,Home.class);
+                startActivity(intentCarga);
+
             }
         });
 
