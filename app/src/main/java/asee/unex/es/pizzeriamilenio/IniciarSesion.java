@@ -32,6 +32,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -136,13 +137,15 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.buttonEntrar:
 
-               // hiloconexion = new ObtenerWebService();
-               // hiloconexion.execute(obtenerPorCorreo, "2", textViewEmail.getText().toString());
+                if (textViewEmail.getText().toString().length() !=0 && editTextPassword.getText().toString().length()!=0){
+                        hiloconexion = new ObtenerWebService();
+                        String sentencia = obtenerPorCorreo + "?correo=" + textViewEmail.getText().toString();
+                        hiloconexion.execute(sentencia, "2");   // Parámetros que recibe doInBackground
 
-                hiloconexion = new ObtenerWebService();
-                String sentencia = obtenerPorCorreo + "?correo=" + textViewEmail.getText().toString();
-                hiloconexion.execute(sentencia,"2");   // Parámetros que recibe doInBackground
-
+                }else{
+                       Toast toast = Toast.makeText(IniciarSesion.this, "Rellene todos los campos", Toast.LENGTH_SHORT);
+                       toast.show();
+                }
                 break;
             case R.id.buttonRegistrarse:
                 Intent intentRegistro = new Intent();
@@ -422,14 +425,13 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
 
             if (params[1] == "1") {    // Consulta de todos los usuarios
 
-            } else if (params[1] == "2") {    // consulta por id
+            } else if (params[1] == "2") {    // consulta por correo
 
                 try {
                     url = new URL(cadena);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //Abrir la conexión
                     connection.setRequestProperty("User-Agent", "Mozilla/5.0" +
                             " (Linux; Android 1.5; es-ES) Ejemplo HTTP");
-                    //connection.setHeader("content-type", "application/json");
 
                     int respuesta = connection.getResponseCode();
                     StringBuilder result = new StringBuilder();
@@ -441,26 +443,22 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
 
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in));  // la introduzco en un BufferedReader
 
-                        // El siguiente proceso lo hago porque el JSONOBject necesita un String y tengo
-                        // que tranformar el BufferedReader a String. Esto lo hago a traves de un
-                        // StringBuilder.
-
                         String line;
                         while ((line = reader.readLine()) != null) {
                             result.append(line);        // Paso toda la entrada al StringBuilder
                         }
 
-                        //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto.
-                        JSONObject respuestaJSON = new JSONObject(result.toString());   //Creo un JSONObject a partir del StringBuilder pasado a cadena
-                        //Accedemos al vector de resultados
+                        JSONObject respuestaJSON = new JSONObject(result.toString());
 
-                        String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
+                        String resultJSON = respuestaJSON.getString("estado");
 
                         if (resultJSON=="1"){      // hay un usuario que mostrar
                             devuelve = devuelve + respuestaJSON.getJSONObject("persona").getString("contrasena");
                         }
                         else if (resultJSON=="2"){
                             devuelve = "El usuario no existe";
+                            Toast toast = Toast.makeText(IniciarSesion.this, "Usuario y/o contraseña incorrectos", Toast.LENGTH_SHORT);
+                            toast.show();
                         }
                     }
                 } catch (MalformedURLException e) {
@@ -477,16 +475,15 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
         }
         @Override
         protected void onPostExecute(String s) {
-         //   resultado.setText(s);
+
             TextView contrasenia = (TextView) findViewById(R.id.password);
             if(s.equals(contrasenia.getText().toString())){
                 Intent intentPagHome = new Intent();
                 intentPagHome.setClass(IniciarSesion.this, Home.class);
                 startActivity(intentPagHome);
             }else{
-        //        Intent intentPagHome = new Intent();
-         //       intentPagHome.setClass(IniciarSesion.this, Home.class);
-         //       startActivity(intentPagHome);
+                Toast toast = Toast.makeText(IniciarSesion.this, "Usuario y/o contraseña incorrectos", Toast.LENGTH_SHORT);
+                toast.show();
             }
         }
     }
