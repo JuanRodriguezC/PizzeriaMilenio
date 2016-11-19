@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_registro"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f0b31616">
 
     <LinearLayout
         android:id="@+id/email_Registro"
@@ -99,6 +101,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/action_enviarDatos"
+            android:textColor="#fbff00"
+            app:backgroundTint="@color/colorButton"
             android:textStyle="bold" />
 
         <Button
@@ -108,6 +112,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/action_borrarDatos"
+            android:textColor="#fbff00"
+            app:backgroundTint="@color/colorButton"
             android:textStyle="bold" />
 
     </LinearLayout>

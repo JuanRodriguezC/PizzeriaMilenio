@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#cfcf3030">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:background="@drawable/hamburguesa"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Hamburguesa Completa"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 3,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:background="@drawable/hamburguesa"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Hamburguesa Normal"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 2,25 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:background="@drawable/hamburguesa"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Hamburguesa Milenio"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 3,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="65dp"
+                android:background="@drawable/sandwich2"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:text="Sanwich Mixto"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 2,50 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="65dp"
+                android:background="@drawable/sandwich2"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:text="Sandwich Vegetal"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 2,75 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="65dp"
+                android:background="@drawable/tallarines"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Tallarines con Carne"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 6,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="65dp"
+                android:background="@drawable/tallarines"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Tallarines Carbonara"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 6,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/patatas"
+                android:layout_marginLeft="3dp"
+                android:layout_alignParentTop="true">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Ración Patatas Fritas"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 3,25 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/patatas"
+                android:layout_marginLeft="3dp"
+                android:layout_alignParentTop="true">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Cartucho Patatas Fritas"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 2,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ensalada"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Ensalada de Atún"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 6,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ensalada"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Ensalada Milenio"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 7,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ensalada"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Ensalada Serrana"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 6,00 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#000000">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ensalada"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp">
+            </ImageView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Ensalada Rosa"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#fbff00"
+                android:layout_alignParentEnd="true">
+            </TextView>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:text="  Precio: 6,50 €   "
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="35dp"
+                android:textAlignment="textEnd">
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

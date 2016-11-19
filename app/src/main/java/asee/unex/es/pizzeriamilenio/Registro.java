@@ -1,5 +1,6 @@
 package asee.unex.es.pizzeriamilenio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,7 +49,10 @@ public class Registro extends AppCompatActivity {
         buttonEnviarDatos=(Button)findViewById(R.id.buttonEnviarDatos);
         buttonEnviarDatos.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v){
-                //enviarDatos
+                //enviarDatosBD();
+                Intent intentPagHome = new Intent();
+                intentPagHome.setClass(Registro.this,Home.class);
+                startActivity(intentPagHome);
             }
         });
     }

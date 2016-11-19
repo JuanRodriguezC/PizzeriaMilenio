@@ -23,6 +23,7 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -37,7 +38,6 @@ import static android.Manifest.permission.READ_CONTACTS;
 
 
 public class IniciarSesion extends AppCompatActivity implements LoaderCallbacks<Cursor> {
-
 
 
     private static final int REQUEST_READ_CONTACTS = 0;
@@ -59,7 +59,7 @@ public class IniciarSesion extends AppCompatActivity implements LoaderCallbacks<
     private EditText editTextPassword;
     private View mProgressView;
     private View mLoginFormView;
-    Button buttonEntrar, buttonRegistrarse;
+    private Button buttonEntrar, buttonRegistrarse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,6 +7,11 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,9 +27,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registro"
+        <activity
+            android:name=".Registro"
             android:label="@string/intent1_name">
         </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/intent2_name"></activity>
+        <activity
+            android:theme="@style/MiTema"
+            android:name="asee.unex.es.pizzeriamilenio.Menu"
+            android:label="@string/intent2_name">
+        </activity>
     </application>
-
 </manifest>
