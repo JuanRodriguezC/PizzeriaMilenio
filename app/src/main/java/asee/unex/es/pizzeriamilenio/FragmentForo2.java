@@ -74,7 +74,6 @@ public class FragmentForo2 extends Fragment {
         return view;
     }
 
-
     public class ObtenerWebService extends AsyncTask<String, Void, String> {
 
         @Override
@@ -82,8 +81,7 @@ public class FragmentForo2 extends Fragment {
 
             String cadena = params[0];
             URL url = null; // Url de donde queremos obtener información
-            String devuelve = "";
-            String devuelve2 = "";
+            String devuelve ="";
 
 
             if (params[1] == "1") {    // Consulta de todos los usuarios
@@ -92,13 +90,11 @@ public class FragmentForo2 extends Fragment {
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //Abrir la conexión
                     connection.setRequestProperty("User-Agent", "Mozilla/5.0" +
                             " (Linux; Android 1.5; es-ES) Ejemplo HTTP");
-                    //connection.setHeader("content-type", "application/json");
 
                     int respuesta = connection.getResponseCode();
                     StringBuilder result = new StringBuilder();
 
                     if (respuesta == HttpURLConnection.HTTP_OK){
-
 
                         InputStream in = new BufferedInputStream(connection.getInputStream());  // preparo la cadena de entrada
 
@@ -135,22 +131,13 @@ public class FragmentForo2 extends Fragment {
                 }
 
                 return devuelve;
-
-            } else if (params[1] == "2") {    // consulta por id
-
-            } else if (params[1] == "3") {    // update
-
-            } else if (params[1] == "4") {    // insert
-
-            } else if (params[1] == "5") {    // delete
             }
             return null;
         }
 
+
         protected void onPostExecute(String s) {
-
             MensajeAdapter adapter = new MensajeAdapter(getActivity(), coleccionDatos1);
-
             lista.setAdapter(adapter);
         }
     }
