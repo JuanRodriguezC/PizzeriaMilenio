@@ -29,7 +29,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -65,7 +65,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -101,7 +101,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -137,7 +137,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -173,7 +173,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -209,7 +209,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -245,7 +245,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -280,7 +280,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -315,7 +315,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -350,7 +350,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -385,7 +385,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView
@@ -420,7 +420,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:layout_alignParentEnd="true">
             </TextView>
             <TextView

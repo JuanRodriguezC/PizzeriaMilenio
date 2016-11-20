@@ -55,44 +55,56 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#8b5a6b">
+                android:textColorHint="#8b5a6b"
+                android:paddingLeft="3dp">
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
                     android:singleLine="true"
+                    android:background="@drawable/edit_text_style"
                     android:textColorLink="?attr/actionMenuTextColor"
-                    android:textColorHint="@android:color/background_dark"
+                    android:textColorHint="@color/accent"
                     android:textColor="@android:color/background_dark"
-                    android:textColorHighlight="@color/icons"
-                    android:textCursorDrawable="@color/icons" />
+                    android:textColorHighlight="@android:color/background_dark"
+                    android:textCursorDrawable="@android:color/background_dark"
+                    android:layout_height="50dp"
+                    android:paddingLeft="5dp" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
+                android:textColorHint="@color/colorButton"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorButton">
+                android:paddingLeft="3dp">
 
                 <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/prompt_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorButton"
-                    android:textColorHighlight="@color/colorButton"
+                    android:background="@drawable/edit_text_style"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHighlight="@android:color/background_dark"
                     android:textColorHint="@color/colorButton"
-                    android:textColorLink="@color/colorButton" />
+                    android:textColorLink="@color/colorButton"
+                    android:paddingLeft="5dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -103,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_entrar"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:backgroundTint="@color/colorButton"
                 android:textStyle="bold"/>
 
@@ -114,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_registrarse"
-                android:textColor="#fbff00"
+                android:textColor="#ffffff"
                 android:backgroundTint="@color/colorButton"
                 android:textStyle="bold" />
         </LinearLayout>

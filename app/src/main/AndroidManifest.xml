@@ -52,5 +52,9 @@
             android:name=".Foro"
             android:label="@string/intent2_name">
         </activity>
+        <activity
+            android:name=".Reserva"
+            android:label="@string/intent2_name">
+        </activity>
     </application>
 </manifest>

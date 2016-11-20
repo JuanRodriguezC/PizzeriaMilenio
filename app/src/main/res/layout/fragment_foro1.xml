@@ -57,15 +57,15 @@
 
 
         <Button
-                    android:id="@+id/buttonEnviarMensaje"
-                    style="?android:textAppearanceSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/action_enviarForo"
-                    android:textColor="#fbff00"
-                    android:backgroundTint="@color/colorButton"
-                    android:textStyle="bold" />
+            android:id="@+id/buttonEnviarMensaje"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/action_enviarForo"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorButton"
+            android:textStyle="bold" />
 
         </LinearLayout>
 </ScrollView>
