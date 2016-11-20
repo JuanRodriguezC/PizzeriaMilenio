@@ -1,7 +1,11 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Adaptadores;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import asee.unex.es.pizzeriamilenio.Fragments.FragmentPestana1;
+import asee.unex.es.pizzeriamilenio.Fragments.FragmentPestana2;
+import asee.unex.es.pizzeriamilenio.Fragments.FragmentPestana3;
 
 /**
  * Created by juan on 30/10/16.

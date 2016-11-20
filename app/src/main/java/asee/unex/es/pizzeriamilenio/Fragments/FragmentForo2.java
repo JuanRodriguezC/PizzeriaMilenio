@@ -1,4 +1,4 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -31,6 +31,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import asee.unex.es.pizzeriamilenio.R;
 
 
 /**

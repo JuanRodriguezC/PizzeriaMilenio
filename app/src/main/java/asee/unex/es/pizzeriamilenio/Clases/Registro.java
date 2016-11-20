@@ -1,4 +1,4 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Clases;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import asee.unex.es.pizzeriamilenio.R;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,6 +67,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                         Intent intentPagHome = new Intent();
                         intentPagHome.setClass(Registro.this, Home.class);
                         startActivity(intentPagHome);
+                        finish();
                     }
                 }else{
                     Toast toast = Toast.makeText(Registro.this, "Rellene todos los campos", Toast.LENGTH_SHORT);

@@ -1,4 +1,4 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Clases;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -47,33 +47,26 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
 
                 if (respuesta == HttpURLConnection.HTTP_OK){
 
-
                     InputStream in = new BufferedInputStream(connection.getInputStream());  // preparo la cadena de entrada
 
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in));  // la introduzco en un BufferedReader
 
-                    // El siguiente proceso lo hago porque el JSONOBject necesita un String y tengo
-                    // que tranformar el BufferedReader a String. Esto lo hago a traves de un
-                    // StringBuilder.
 
                     String line;
                     while ((line = reader.readLine()) != null) {
                         result.append(line);        // Paso toda la entrada al StringBuilder
                     }
 
-                    //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto.
-                    JSONObject respuestaJSON = new JSONObject(result.toString());   //Creo un JSONObject a partir del StringBuilder pasado a cadena
-                    //Accedemos al vector de resultados
+                    JSONObject respuestaJSON = new JSONObject(result.toString());
 
-                    String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
+                    String resultJSON = respuestaJSON.getString("estado");
 
-                    if (resultJSON=="1"){      // hay un usuario que mostrar
-                        devuelve = devuelve + respuestaJSON.getJSONObject("persona").getString("correo") + " " +
-                                respuestaJSON.getJSONObject("persona").getString("contrasena");
+                    if (resultJSON=="1"){      // usuario conectado
+                        devuelve = "CONNECT";
 
                     }
                     else if (resultJSON=="2"){
-                        devuelve = "El usuario no existe";
+                        devuelve = "DISCONNECTED";
                     }
                 }
             } catch (MalformedURLException e) {

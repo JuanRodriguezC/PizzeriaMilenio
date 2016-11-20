@@ -1,10 +1,13 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import asee.unex.es.pizzeriamilenio.R;
+
 /**
  * Created by juan on 30/10/16.
  */

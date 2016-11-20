@@ -1,8 +1,10 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Adaptadores;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import asee.unex.es.pizzeriamilenio.Fragments.FragmentForo1;
+import asee.unex.es.pizzeriamilenio.Fragments.FragmentForo2;
 
 
 public class AdaptadorViewForoPagePrincipal extends FragmentPagerAdapter {

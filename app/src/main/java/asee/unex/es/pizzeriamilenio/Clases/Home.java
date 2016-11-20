@@ -1,4 +1,4 @@
-package asee.unex.es.pizzeriamilenio;
+package asee.unex.es.pizzeriamilenio.Clases;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,6 +13,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import asee.unex.es.pizzeriamilenio.R;
 
 public class Home extends AppCompatActivity {
 
@@ -49,6 +51,9 @@ public class Home extends AppCompatActivity {
         buttonOfertas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+            //    Intent intentOfertas = new Intent();
+            //    intentOfertas.setClass(Home.this,Ofertas.class);
+            //    startActivity(intentOfertas);
                 Intent intentOfertas = new Intent();
                 intentOfertas.setClass(Home.this,Ofertas.class);
                 startActivity(intentOfertas);

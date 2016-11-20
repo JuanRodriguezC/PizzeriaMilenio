@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".IniciarSesion"
+            android:name=".Clases.IniciarSesion"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,28 +32,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Registro"
+            android:name=".Clases.Registro"
             android:label="@string/intent1_name">
         </activity>
         <activity
-            android:name=".Home"
+            android:name=".Clases.Home"
             android:label="@string/intent2_name"></activity>
         <activity
             android:theme="@style/MiTema"
-            android:name=".Menu"
+            android:name=".Clases.Menu"
             android:label="@string/intent2_name">
         </activity>
         <activity
-            android:name=".Ofertas"
+            android:name=".Clases.Ofertas"
             android:label="@string/intent2_name">
         </activity>
         <activity
             android:theme="@style/MiTema"
-            android:name=".Foro"
+            android:name=".Clases.Foro"
             android:label="@string/intent2_name">
         </activity>
         <activity
-            android:name=".Reserva"
+            android:name=".Clases.Reserva"
             android:label="@string/intent2_name">
         </activity>
     </application>
