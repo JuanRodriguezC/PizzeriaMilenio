@@ -3,7 +3,9 @@ package asee.unex.es.pizzeriamilenio.Clases;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -48,10 +50,13 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
     private View mProgressView;
     private View mLoginFormView;
     private Button buttonEntrar, buttonRegistrarse;
+    private String mail, p;
     ObtenerWebService hiloconexion;
 
     String IP = "http://aplicacionasee.esy.es";
     String obtenerPorCorreo = IP + "/obtener_personas_por_correo.php";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +86,20 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        textViewEmail.setText(preferencias.getString("mail",""));
+        editTextPassword.setText(preferencias.getString("password",""));
+
+        mail = preferencias.getString("mail",null);
+        p = preferencias.getString("password",null);
+
+        if(mail != null && p != null){
+            Intent intentPagHome = new Intent();
+            intentPagHome.setClass(IniciarSesion.this, Home.class);
+            startActivity(intentPagHome);
+            finish();
+        }
     }
 
     @Override
@@ -90,9 +109,9 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
 
                 if (textViewEmail.getText().toString().length() !=0 && editTextPassword.getText().toString().length()!=0) {
                     if (emailValido() && passwordValida()) {
-                        hiloconexion = new ObtenerWebService();
-                        String sentencia = obtenerPorCorreo + "?correo=" + textViewEmail.getText().toString();
-                        hiloconexion.execute(sentencia, "2");   // Parámetros que recibe doInBackground
+                            hiloconexion = new ObtenerWebService();
+                            String sentencia = obtenerPorCorreo + "?correo=" + textViewEmail.getText().toString();
+                            hiloconexion.execute(sentencia, "2");   // Parámetros que recibe doInBackground
                     }
                 }else{
                        Toast toast = Toast.makeText(IniciarSesion.this, "Rellene todos los campos", Toast.LENGTH_SHORT);
@@ -238,6 +257,13 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
                 Intent intentPagHome = new Intent();
                 intentPagHome.setClass(IniciarSesion.this, Home.class);
                 startActivity(intentPagHome);
+
+                SharedPreferences preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("mail", textViewEmail.getText().toString());
+                editor.putString("password", editTextPassword.getText().toString());
+
+                editor.commit();
                 finish();
             }else{
                 Toast toast = Toast.makeText(IniciarSesion.this, "Usuario y/o contraseña incorrectos", Toast.LENGTH_SHORT);

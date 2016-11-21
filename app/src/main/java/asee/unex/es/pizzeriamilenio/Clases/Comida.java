@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import asee.unex.es.pizzeriamilenio.Adaptadores.AdaptadorViewPagerPrincipal;
 import asee.unex.es.pizzeriamilenio.R;
 
-public class Menu extends AppCompatActivity {
+public class Comida extends AppCompatActivity {
 
     private AdaptadorViewPagerPrincipal Adaptador_ViewPagerPrincipal;
     private android.support.v4.view.ViewPager ViewPager;

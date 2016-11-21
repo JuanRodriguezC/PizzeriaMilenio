@@ -11,10 +11,14 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+import android.view.Menu;
 
 import asee.unex.es.pizzeriamilenio.R;
+
 
 public class Home extends AppCompatActivity {
 
@@ -32,7 +36,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentComida = new Intent();
-                intentComida.setClass(Home.this,Menu.class);  //cambiar
+                intentComida.setClass(Home.this,Comida.class);
                 startActivity(intentComida);
             }
         });
@@ -51,9 +55,6 @@ public class Home extends AppCompatActivity {
         buttonOfertas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            //    Intent intentOfertas = new Intent();
-            //    intentOfertas.setClass(Home.this,Ofertas.class);
-            //    startActivity(intentOfertas);
                 Intent intentOfertas = new Intent();
                 intentOfertas.setClass(Home.this,Ofertas.class);
                 startActivity(intentOfertas);
@@ -90,6 +91,31 @@ public class Home extends AppCompatActivity {
                 startActivity(intentForo);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        Context context = getApplicationContext();
+        CharSequence text = null;
+        int duration = Toast.LENGTH_SHORT;
+
+        if (id == R.id.action_settings) {
+            text="Opcion Settings";
+            Intent intentAjustes = new Intent();
+            intentAjustes.setClass(Home.this,Ajustes.class);  //cambiar
+            startActivity(intentAjustes);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void alertGPSDesactivado(){

@@ -36,11 +36,13 @@
             android:label="@string/intent1_name">
         </activity>
         <activity
+            android:theme="@style/AppTheme"
             android:name=".Clases.Home"
-            android:label="@string/intent2_name"></activity>
+            android:label="@string/intent2_name">
+        </activity>
         <activity
             android:theme="@style/MiTema"
-            android:name=".Clases.Menu"
+            android:name=".Clases.Comida"
             android:label="@string/intent2_name">
         </activity>
         <activity
@@ -54,6 +56,10 @@
         </activity>
         <activity
             android:name=".Clases.Reserva"
+            android:label="@string/intent2_name">
+        </activity>
+        <activity
+            android:name=".Clases.Ajustes"
             android:label="@string/intent2_name">
         </activity>
     </application>
