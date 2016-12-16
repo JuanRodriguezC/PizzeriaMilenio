@@ -78,6 +78,7 @@ public class FragmentForo2 extends Fragment {
 
     public class ObtenerWebService extends AsyncTask<String, Void, String> {
 
+
         @Override
         protected String doInBackground(String... params) {
 
@@ -113,9 +114,10 @@ public class FragmentForo2 extends Fragment {
 
                         String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
 
-
-                        if (resultJSON=="1"){      // hay usuarios a mostrar
+                        if (resultJSON=="1"){      // hay mensajes a mostrar
                             JSONArray mensajesJSON = respuestaJSON.getJSONArray("foros");   // estado es el nombre del campo en el JSON
+
+
                             for(int i=0;i<mensajesJSON.length();i++){
                                 coleccionDatos1.add(new Mensaje(mensajesJSON.getJSONObject(i).getString("Usuario"), mensajesJSON.getJSONObject(i).getString("Mensaje")));
                             }

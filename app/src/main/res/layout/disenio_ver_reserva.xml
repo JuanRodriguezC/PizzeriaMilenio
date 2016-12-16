@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/nombreR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="20sp"
+        android:text="nombre"
+        android:textStyle="normal|bold|italic"
+        android:textColor="@android:color/background_dark"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp" />
+    <TextView
+        android:id="@+id/fechaR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fecha"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_dark"
+        android:textAlignment="viewStart"
+        android:paddingLeft="10dp"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/horaR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hora"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_dark"
+        android:textAlignment="viewStart"
+        android:paddingLeft="10dp"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/numComenR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NumComensales"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_dark"
+        android:textAlignment="viewStart"
+        android:paddingLeft="10dp"
+        android:paddingBottom="2dp" />
+    <TextView
+        android:id="@+id/identR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificador de la Reserva"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_dark"
+        android:textAlignment="viewStart"
+        android:paddingLeft="10dp"
+        android:paddingBottom="2dp" />
+</LinearLayout>

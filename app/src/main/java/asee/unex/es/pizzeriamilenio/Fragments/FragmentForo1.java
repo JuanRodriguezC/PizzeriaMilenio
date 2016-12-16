@@ -1,7 +1,9 @@
 package asee.unex.es.pizzeriamilenio.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import asee.unex.es.pizzeriamilenio.Clases.Foro;
+import asee.unex.es.pizzeriamilenio.Clases.Home;
 import asee.unex.es.pizzeriamilenio.Clases.ObtenerWebService;
 import asee.unex.es.pizzeriamilenio.R;
 
@@ -54,6 +58,7 @@ public class FragmentForo1 extends Fragment implements View.OnClickListener {
 
                     Toast toast = Toast.makeText(this.getActivity(), "Mensaje Enviado", Toast.LENGTH_SHORT);
                     toast.show();
+
 
                 }else{
                     Toast toast = Toast.makeText(this.getActivity(), "Rellene todos los campos", Toast.LENGTH_SHORT);

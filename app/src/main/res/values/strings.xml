@@ -15,7 +15,7 @@
     <string name="prompt_NumComen">Número de comensales</string>
     <string name="prompt_HoraReserv">Hora de la reserva</string>
     <string name="prompt_FechaReserv">Fecha de la reserva</string>
-    <string name="prompt_nombre">Nombre de la reserva</string>
+    <string name="prompt_nombre">Nombre de la Reserva</string>
     <string name="prompt_numTfono">Número de contacto</string>
     <string name="prompt_prefNombre">"Preferencias de Nombre</string>
     <string name="prompt_preftelefono">"Almacenar Num de Telefono</string>
@@ -32,7 +32,9 @@
     <string name="action_cerrarSesion">Cerrar Sesión</string>
     <string name="action_borrarDatos">Borrar Datos</string>
     <string name="action_enviarForo">Enviar Mensaje</string>
+    <string name="action_leerForo">Leer Mensajes</string>
     <string name="action_enviarReserva">Realizar Reserva</string>
+    <string name="action_misReserva">Mis Reservas</string>
     <string name="action_actualizarMensajes">Actualizar Lista Mensajes</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="action_comida">MENÚ</string>
@@ -70,5 +72,7 @@
 
     <string name="title_activity_menu2">Menu2</string>
     <string name="action_settings">Ajustes</string>
+    <string name="action_eliminarR">Anular Reserva</string>
+    <string name="action_modificarR">Modificar Reserva</string>
     <string name="section_format">Hello World from section: %1$d</string>
 </resources>

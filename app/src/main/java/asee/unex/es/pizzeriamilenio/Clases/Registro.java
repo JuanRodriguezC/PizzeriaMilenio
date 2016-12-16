@@ -1,5 +1,7 @@
 package asee.unex.es.pizzeriamilenio.Clases;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,8 +16,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     Button buttonBorrarDatos;
     Button buttonEnviarDatos;
-    Spinner sexo;
     EditText editTextEmail, editTextPassword, editTextPassword2, editTextFechaNac, editTextUsuario;
+    private SharedPreferences preferencias;
 
     ObtenerWebService hiloconexion;
 
@@ -63,7 +65,15 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     if(validezPassword() && emailValido()){
                         hiloconexion = new ObtenerWebService();
                         hiloconexion.execute(insertar, "4", editTextUsuario.getText().toString(), editTextEmail.getText().toString(), editTextPassword.getText().toString(), editTextFechaNac.getText().toString());
+/*
+                        preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
 
+                        SharedPreferences.Editor editor = preferencias.edit();
+                        editor.putString("mail", editTextEmail.getText().toString());
+                        editor.putString("password", editTextPassword.getText().toString());
+                        editor.putString("user", editTextUsuario.getText().toString());
+
+*/
                         Intent intentPagHome = new Intent();
                         intentPagHome.setClass(Registro.this, Home.class);
                         startActivity(intentPagHome);

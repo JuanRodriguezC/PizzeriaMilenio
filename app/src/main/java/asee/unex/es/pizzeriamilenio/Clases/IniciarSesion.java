@@ -51,11 +51,11 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
     private View mLoginFormView;
     private Button buttonEntrar, buttonRegistrarse;
     private String mail, p;
+    private SharedPreferences preferencias;
     ObtenerWebService hiloconexion;
 
     String IP = "http://aplicacionasee.esy.es";
     String obtenerPorCorreo = IP + "/obtener_personas_por_correo.php";
-
 
 
     @Override
@@ -87,7 +87,7 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
 
-        SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
         textViewEmail.setText(preferencias.getString("mail",""));
         editTextPassword.setText(preferencias.getString("password",""));
 
@@ -180,6 +180,10 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    public SharedPreferences getPreferencias() {
+        return this.preferencias;
+    }
+
     public boolean passwordValida(){
         if(editTextPassword.getText().toString().length() > 4){
             return true;
@@ -249,6 +253,7 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
             }
             return null;
         }
+
         @Override
         protected void onPostExecute(String s) {
 

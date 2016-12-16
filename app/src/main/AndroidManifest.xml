@@ -59,6 +59,18 @@
             android:label="@string/intent2_name">
         </activity>
         <activity
+            android:name=".Clases.MisReservas"
+            android:label="MIS RESERVAS">
+        </activity>
+        <activity
+            android:name=".Clases.AnularReserva"
+            android:label="@string/intent2_name">
+        </activity>
+        <activity
+            android:name=".Clases.ModificarReserva"
+            android:label="@string/intent2_name">
+        </activity>
+        <activity
             android:name=".Clases.Ajustes"
             android:label="@string/intent2_name">
         </activity>

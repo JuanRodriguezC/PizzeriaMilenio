@@ -47,7 +47,7 @@
             android:padding="10dp"
             android:layout_marginRight="2dp"
             android:background="@drawable/edit_text_style"
-            android:inputType="text"
+            android:inputType="number"
             android:singleLine="true" />
 
 
@@ -77,8 +77,10 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="6dp">
-        <EditText
+            android:paddingTop="6dp"
+            android:weightSum="1">
+
+            <EditText
             android:id="@+id/editTextFecha"
             android:layout_width= "match_parent"
             android:layout_height="wrap_content"
@@ -88,9 +90,12 @@
             android:padding="10dp"
             android:layout_marginRight="2dp"
             android:background="@drawable/edit_text_style"
-            android:inputType="date"
-            android:singleLine="true" />
-    </android.support.design.widget.TextInputLayout>
+            android:inputType="none"
+                android:focusable="false"
+            android:singleLine="true"
+                android:onClick="onClick"
+                android:editable="false"/>
+        </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -107,8 +112,9 @@
                 android:padding="10dp"
                 android:layout_marginRight="2dp"
                 android:background="@drawable/edit_text_style"
-                android:inputType="datetime"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:inputType="none"
+                android:focusable="false"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -118,6 +124,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/action_enviarReserva"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorButton"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonMisReservas"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/action_misReserva"
             android:textColor="#ffffff"
             android:backgroundTint="@color/colorButton"
             android:textStyle="bold" />
