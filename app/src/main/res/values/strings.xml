@@ -8,7 +8,7 @@
     <string name="prompt_password">Contraseña</string>
     <string name="prompt_password2">Repite la contraseña</string>
     <string name="prompt_usuario">Nombre de Usuario</string>
-    <string name="prompt_fecNac">Fecha de Nacimiento (dd/mm/yyyy)</string>
+    <string name="prompt_fecNac">Fecha de Nacimiento</string>
     <string name="prompt_sexo">Género</string>
     <string name="prompt_tema">Tema Principal</string>
     <string name="prompt_mensaje">Inserte su mensaje...</string>
@@ -34,6 +34,7 @@
     <string name="action_enviarForo">Enviar Mensaje</string>
     <string name="action_leerForo">Leer Mensajes</string>
     <string name="action_enviarReserva">Realizar Reserva</string>
+    <string name="action_modificarReserva">Modificar Reserva</string>
     <string name="action_misReserva">Mis Reservas</string>
     <string name="action_actualizarMensajes">Actualizar Lista Mensajes</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -74,5 +75,5 @@
     <string name="action_settings">Ajustes</string>
     <string name="action_eliminarR">Anular Reserva</string>
     <string name="action_modificarR">Modificar Reserva</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_menu">Volver Menú Principal</string>
 </resources>

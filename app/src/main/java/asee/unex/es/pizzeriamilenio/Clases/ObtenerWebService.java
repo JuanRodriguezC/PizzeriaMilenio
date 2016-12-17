@@ -31,9 +31,7 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
         String devuelve = "";
 
 
-        if (params[1] == "1") {    // Consulta de todos los usuarios
-
-        } else if (params[1] == "2") {    // consulta por id
+        if (params[1] == "2") {    // consulta por id
 
             try {
                 url = new URL(cadena);
@@ -86,8 +84,6 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
             try {
                 HttpURLConnection urlConn;
 
-                DataOutputStream printout;
-                DataInputStream input;
                 url = new URL(cadena);
                 urlConn = (HttpURLConnection) url.openConnection();
                 urlConn.setDoInput(true);

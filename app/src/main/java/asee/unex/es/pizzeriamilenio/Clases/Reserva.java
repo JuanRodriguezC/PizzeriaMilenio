@@ -34,23 +34,14 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextNombre, editTextNumContacto, editTextNumComen;
     private static EditText editTextFecha, editTextHora;
     private String correo;
-    // 7 days in milliseconds - 7 * 24 * 60 * 60 * 1000
-    private int SEVEN_DAYS = 604800000;
+
     private static String timeString;
     private static String dateString;
-    private Date mDate;
-
     ObtenerWebService hiloconexion;
 
     //IP de mi url
     String IP = "http://aplicacionasee.esy.es";
     String insertarReserva = IP + "/insertar_reserva.php";
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +50,7 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
 
         editTextNombre = (EditText) findViewById(R.id.editTextNombre);
         editTextNumContacto = (EditText) findViewById(R.id.editTextNumTfono);
-        editTextFecha = (EditText) findViewById(R.id.editTextFecha);
         editTextNumComen = (EditText) findViewById(R.id.editTextNumComensales);
-        editTextHora = (EditText) findViewById(R.id.editTextHoraReserva);
 
         SharedPreferences p = getSharedPreferences("datos", Context.MODE_PRIVATE);
         correo = p.getString("mail", "");
@@ -71,9 +60,6 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
 
         buttonMisReservas = (Button) findViewById(R.id.buttonMisReservas);
         buttonMisReservas.setOnClickListener(this);
-
-
-        setDefaultDateTime();
 
         editTextFecha = (EditText) findViewById(R.id.editTextFecha);
         editTextFecha.setOnClickListener(this);
@@ -170,25 +156,6 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
         dialog.show(getFragmentManager(), "timepicker");
     }
 
-
-    public void setDefaultDateTime() {
-
-        // Default is current time + 7 days
-        mDate = new Date();
-        mDate = new Date(mDate.getTime() + SEVEN_DAYS);
-
-        Calendar c = Calendar.getInstance();
-        c.setTime(mDate);
-
-        setDateString(c.get(Calendar.YEAR), c.get(Calendar.MONTH),
-                c.get(Calendar.DAY_OF_MONTH));
-
-        editTextFecha.setText(dateString);
-
-        setTimeString(c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE));
-
-        editTextHora.setText(timeString);
-    }
 
     private static void setDateString(int year, int monthOfYear, int dayOfMonth) {
 

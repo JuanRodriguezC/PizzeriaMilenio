@@ -79,13 +79,18 @@ public class MisReservas extends AppCompatActivity {
 
         if (id == R.id.action_borrarR) {
             Intent intentAnularR = new Intent();
-            intentAnularR.setClass(this, AnularReserva.class);  //cambiar
+            intentAnularR.setClass(this, AnularReserva.class);
             startActivity(intentAnularR);
         }
         if (id == R.id.action_modificarR) {
             Intent intentModificarReserva = new Intent();
-            intentModificarReserva.setClass(this, ModificarReserva.class);  //cambiar
+            intentModificarReserva.setClass(this, ModificarReserva.class);
             startActivity(intentModificarReserva);
+        }
+        if (id == R.id.action_menu) {
+            Intent intentMenu = new Intent();
+            intentMenu.setClass(this, Home.class);
+            startActivity(intentMenu);
         }
         return super.onOptionsItemSelected(item);
     }

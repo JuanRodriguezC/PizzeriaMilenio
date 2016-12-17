@@ -1,14 +1,21 @@
 package asee.unex.es.pizzeriamilenio.Clases;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import asee.unex.es.pizzeriamilenio.R;
 
@@ -16,8 +23,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     Button buttonBorrarDatos;
     Button buttonEnviarDatos;
-    EditText editTextEmail, editTextPassword, editTextPassword2, editTextFechaNac, editTextUsuario;
-    private SharedPreferences preferencias;
+    EditText editTextEmail, editTextPassword, editTextPassword2, editTextUsuario;
+    private static EditText editTextFechaNac;
+    private static String dateString;
 
     ObtenerWebService hiloconexion;
 
@@ -37,7 +45,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         editTextPassword = (EditText) findViewById(R.id.passwordR);
         editTextPassword2 = (EditText) findViewById(R.id.passwordR2);
-        editTextFechaNac = (EditText) findViewById(R.id.fecNac);
         editTextUsuario = (EditText) findViewById(R.id.usuario);
         editTextEmail = (EditText) findViewById(R.id.emailRegistro);
 
@@ -46,6 +53,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         buttonEnviarDatos = (Button) findViewById(R.id.buttonEnviarDatos);
         buttonEnviarDatos.setOnClickListener(this);
+
+        editTextFechaNac = (EditText) findViewById(R.id.fecNac);
+        editTextFechaNac.setOnClickListener(this);
     }
 
 
@@ -65,15 +75,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     if(validezPassword() && emailValido()){
                         hiloconexion = new ObtenerWebService();
                         hiloconexion.execute(insertar, "4", editTextUsuario.getText().toString(), editTextEmail.getText().toString(), editTextPassword.getText().toString(), editTextFechaNac.getText().toString());
-/*
-                        preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
 
-                        SharedPreferences.Editor editor = preferencias.edit();
-                        editor.putString("mail", editTextEmail.getText().toString());
-                        editor.putString("password", editTextPassword.getText().toString());
-                        editor.putString("user", editTextUsuario.getText().toString());
-
-*/
                         Intent intentPagHome = new Intent();
                         intentPagHome.setClass(Registro.this, Home.class);
                         startActivity(intentPagHome);
@@ -87,9 +89,31 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             case R.id.buttonBorrarDatos:
                 borrarDatos();
                 break;
+            case R.id.fecNac:
+                editTextFechaNac.setInputType(InputType.TYPE_NULL);
+                showDatePickerDialog();
+                break;
             default:
                 break;
         }
+    }
+
+    private void showDatePickerDialog() {
+        DialogFragment dialog = new Registro.DatePickerFragment();
+        dialog.show(getFragmentManager(), "datepicker");
+    }
+
+    private static void setDateString(int year, int monthOfYear, int dayOfMonth) {
+        monthOfYear++;
+        String mon = "" + monthOfYear;
+        String day = "" + dayOfMonth;
+
+        if (monthOfYear < 10)
+            mon = "0" + monthOfYear;
+        if (dayOfMonth < 10)
+            day = "0" + dayOfMonth;
+
+        dateString = day + "-" + mon + "-" + year;
     }
 
     public boolean camposRellenos(){
@@ -130,6 +154,29 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     Toast.LENGTH_SHORT);
             toast.show();
             return false;
+        }
+    }
+
+    public static class DatePickerFragment extends DialogFragment implements
+            DatePickerDialog.OnDateSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+            Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            // Create a new instance of DatePickerDialog and return it
+            return new DatePickerDialog(getActivity(), this, year, month, day);
+        }
+
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear,
+                              int dayOfMonth) {
+            setDateString(year, monthOfYear, dayOfMonth);
+            editTextFechaNac.setText(dateString);
         }
     }
 }

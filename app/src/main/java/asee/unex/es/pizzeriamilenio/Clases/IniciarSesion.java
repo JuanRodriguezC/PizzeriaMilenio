@@ -85,7 +85,6 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
         buttonRegistrarse.setOnClickListener(this);
 
         mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
 
         preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
         textViewEmail.setText(preferencias.getString("mail",""));
