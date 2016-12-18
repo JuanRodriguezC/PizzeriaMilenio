@@ -31,15 +31,12 @@ public class Ofertas extends AppCompatActivity {
         items.add(new CuadrosOfertas(R.drawable.opizzas));
         items.add(new CuadrosOfertas(R.drawable.descuento10));
 
-        // Obtener el Recycler
         recycler = (RecyclerView) findViewById(R.id.reciclador);
         recycler.setHasFixedSize(true);
 
-        // Usar un administrador para LinearLayout
         lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
 
-        // Crear un nuevo adaptador
         adapter = new AdaptadorOfertas(items);
         recycler.setAdapter(adapter);
     }

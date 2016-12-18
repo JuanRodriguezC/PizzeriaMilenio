@@ -5,7 +5,7 @@
     android:id="@+id/activity_registro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cfcf3030">
+    android:background="#4DB6AC">
 
     <LinearLayout
         android:id="@+id/email_Registro"

@@ -71,7 +71,6 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
-              //      attemptLogin();
                     return true;
                 }
                 return false;
@@ -124,18 +123,6 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
                 break;
             default:
                 break;
-        }
-    }
-
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_READ_CONTACTS) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-             //   populateAutoComplete();
-            }
         }
     }
 

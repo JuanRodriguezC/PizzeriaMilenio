@@ -17,8 +17,6 @@ public class FragmentPestana2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        //  "Inflamos" el archivo XML correspondiente a esta sección.
         return inflater.inflate(R.layout.fragment_pestana2,container,false);
     }
 

@@ -140,7 +140,7 @@ public class ModificarReserva extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent intentReserva = new Intent();
-                intentReserva.setClass(ModificarReserva.this, MisReservas.class);  //cambiar
+                intentReserva.setClass(ModificarReserva.this, MisReservas.class);
                 startActivity(intentReserva);
             }
         });
@@ -180,7 +180,6 @@ public class ModificarReserva extends AppCompatActivity implements View.OnClickL
 
     private static void setDateString(int year, int monthOfYear, int dayOfMonth) {
 
-        // Increment monthOfYear for Calendar/Date -> Time Format setting
         monthOfYear++;
         String mon = "" + monthOfYear;
         String day = "" + dayOfMonth;
@@ -237,12 +236,10 @@ public class ModificarReserva extends AppCompatActivity implements View.OnClickL
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-            // Use the current time as the default values for the picker
             final Calendar c = Calendar.getInstance();
             int hour = c.get(Calendar.HOUR_OF_DAY);
             int minute = c.get(Calendar.MINUTE);
 
-            // Create a new instance of TimePickerDialog and return
             return new TimePickerDialog(getActivity(), this, hour, minute,
                     true);
         }
@@ -277,20 +274,18 @@ public class ModificarReserva extends AppCompatActivity implements View.OnClickL
 
                     if (respuesta == HttpURLConnection.HTTP_OK){
 
-                        InputStream in = new BufferedInputStream(connection.getInputStream());  // preparo la cadena de entrada
-
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(in));  // la introduzco en un BufferedReader
-
+                        InputStream in = new BufferedInputStream(connection.getInputStream());
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                         String line;
                         while ((line = reader.readLine()) != null) {
-                            result.append(line);        // Paso toda la entrada al StringBuilder
+                            result.append(line);
                         }
 
                         JSONObject respuestaJSON = new JSONObject(result.toString());
 
-                        String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
+                        String resultJSON = respuestaJSON.getString("estado");
 
-                        if (resultJSON=="1"){      // hay usuarios a mostrar
+                        if (resultJSON=="1"){
                             JSONArray reservasJSON = respuestaJSON.getJSONArray("reserva");
                             for(int i=0;i<reservasJSON.length();i++){
                                 if(reservasJSON.getJSONObject(i).getString("ident").equals(identificador)) {

@@ -22,10 +22,9 @@ public class AdaptadorViewPagerPrincipal extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // recibimos la posición por parámetro y en función de ella devolvemos el Fragment correspondiente a esa sección.
-        switch (position) {
 
-            case 0: // siempre empieza desde 0
+        switch (position) {
+            case 0:
                 return new FragmentPestana1();
 
             case 1:
@@ -34,15 +33,11 @@ public class AdaptadorViewPagerPrincipal extends FragmentPagerAdapter {
             case 2:
                 return new FragmentPestana3();
 
-
-            // si la posición recibida no se corresponde a ninguna sección
             default:
                 return null;
         }
     }
 
-    /*devuelve el numero de pestañas dato que recibiremos cuando instanciemos el adaptador
-        desde nuestra actividad principal */
     @Override
     public int getCount() {
         return numPestanas;
@@ -51,17 +46,14 @@ public class AdaptadorViewPagerPrincipal extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
 
-        // recibimos la posición por parámetro y en función de ella devolvemos el titulo correspondiente.
         switch (position) {
 
-            case 0: // siempre empieza desde 0, la primera Tab es 0
+            case 0:
                 return "Pizzas";
             case 1:
                 return "Bocadillos";
             case 2:
                 return "Varios";
-
-            // si la posición recibida no se corresponde a ninguna sección
             default:
                 return null;
         }

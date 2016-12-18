@@ -46,7 +46,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentReserva = new Intent();
-                intentReserva.setClass(Home.this,Reserva.class);  //cambiar
+                intentReserva.setClass(Home.this,Reserva.class);
                 startActivity(intentReserva);
             }
         });
@@ -95,7 +95,6 @@ public class Home extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -112,7 +111,7 @@ public class Home extends AppCompatActivity {
         if (id == R.id.action_settings) {
             text="Opcion Settings";
             Intent intentAjustes = new Intent();
-            intentAjustes.setClass(Home.this,Ajustes.class);  //cambiar
+            intentAjustes.setClass(Home.this,Ajustes.class);
             startActivity(intentAjustes);
         }
         return super.onOptionsItemSelected(item);

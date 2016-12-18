@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -117,7 +116,7 @@ public class Foro extends AppCompatActivity implements View.OnClickListener {
 
                         String line;
                         while ((line = reader.readLine()) != null) {
-                            result.append(line);        // Paso toda la entrada al StringBuilder
+                            result.append(line);
                         }
 
                         JSONObject respuestaJSON = new JSONObject(result.toString());
@@ -173,7 +172,7 @@ public class Foro extends AppCompatActivity implements View.OnClickListener {
         public View getView(int position, View convertView, ViewGroup parent) {
             Mensaje m = getItem(position);
             if (convertView == null) {
-                convertView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.item_user, parent, false);/////////
+                convertView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.item_user, parent, false);
             }
 
             TextView titulo = (TextView) convertView.findViewById(R.id.titulo);

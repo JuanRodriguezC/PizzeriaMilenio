@@ -38,21 +38,18 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //Abrir la conexión
                 connection.setRequestProperty("User-Agent", "Mozilla/5.0" +
                         " (Linux; Android 1.5; es-ES) Ejemplo HTTP");
-                //connection.setHeader("content-type", "application/json");
 
                 int respuesta = connection.getResponseCode();
                 StringBuilder result = new StringBuilder();
 
                 if (respuesta == HttpURLConnection.HTTP_OK){
 
-                    InputStream in = new BufferedInputStream(connection.getInputStream());  // preparo la cadena de entrada
-
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));  // la introduzco en un BufferedReader
-
+                    InputStream in = new BufferedInputStream(connection.getInputStream());
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
                     String line;
                     while ((line = reader.readLine()) != null) {
-                        result.append(line);        // Paso toda la entrada al StringBuilder
+                        result.append(line);
                     }
 
                     JSONObject respuestaJSON = new JSONObject(result.toString());
@@ -76,9 +73,6 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
             }
 
             return devuelve;
-
-        } else if (params[1] == "3") {    // update
-
 
         } else if (params[1] == "4") {    // insert Usuario
             try {
@@ -124,7 +118,7 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
                     String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
 
 
-                    if (resultJSON == "1") {      // hay un usuario que mostrar
+                    if (resultJSON == "1") {
                         devuelve = "Usuario insertado correctamente";
 
                     } else if (resultJSON == "2") {
@@ -144,9 +138,6 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
         }else if (params[1] == "5"){            //INSERTAR MENSAJE
             try {
                 HttpURLConnection urlConn;
-
-                DataOutputStream printout;
-                DataInputStream input;
                 url = new URL(cadena);
                 urlConn = (HttpURLConnection) url.openConnection();
                 urlConn.setDoInput(true);
@@ -179,15 +170,13 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
                     while ((line = br.readLine()) != null) {
                         result.append(line);
                     }
-                    //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto.
-                    //Accedemos al vector de resultado
 
                     JSONObject respuestaJSON = new JSONObject(result.toString());
 
                     String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
 
 
-                    if (resultJSON == "1") {      // hay un usuario que mostrar
+                    if (resultJSON == "1") {
                         devuelve = "Mensaje insertado correctamente";
 
                     } else if (resultJSON == "2") {
@@ -206,9 +195,6 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
         } else if (params[1] == "6") {    // ELIMINAR RESERVA
             try {
                 HttpURLConnection urlConn;
-
-                DataOutputStream printout;
-                DataInputStream input;
                 url = new URL(cadena);
                 urlConn = (HttpURLConnection) url.openConnection();
                 urlConn.setDoInput(true);
@@ -239,16 +225,12 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
                     BufferedReader br=new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
                     while ((line=br.readLine()) != null) {
                         result.append(line);
-                        //response+=line;
                     }
 
-                    //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto.
-                    JSONObject respuestaJSON = new JSONObject(result.toString());   //Creo un JSONObject a partir del StringBuilder pasado a cadena
-                    //Accedemos al vector de resultados
+                    JSONObject respuestaJSON = new JSONObject(result.toString());
 
-                    String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
-
-                    if (resultJSON == "1") {      // hay un alumno que mostrar
+                    String resultJSON = respuestaJSON.getString("estado");
+                    if (resultJSON == "1") {
                         devuelve = "Usuario borrado correctamente";
 
                     } else if (resultJSON == "2") {
@@ -267,9 +249,6 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
         }else if (params[1] == "7"){            //INSERTAR RESERVA
             try {
                 HttpURLConnection urlConn;
-
-                DataOutputStream printout;
-                DataInputStream input;
                 url = new URL(cadena);
                 urlConn = (HttpURLConnection) url.openConnection();
                 urlConn.setDoInput(true);
@@ -309,10 +288,9 @@ public class ObtenerWebService extends AsyncTask<String, Void, String> {
 
                     JSONObject respuestaJSON = new JSONObject(result.toString());
 
-                    String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
+                    String resultJSON = respuestaJSON.getString("estado");
 
-
-                    if (resultJSON == "1") {      // hay un usuario que mostrar
+                    if (resultJSON == "1") {
                         devuelve = "Mensaje insertado correctamente";
 
                     } else if (resultJSON == "2") {

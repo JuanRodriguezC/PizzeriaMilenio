@@ -29,7 +29,6 @@ public class FragmentPestana1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        //  "Inflamos" el archivo XML correspondiente a esta sección.
         View view = inflater.inflate(R.layout.fragment_pestana1,container,false);
 
         buttonAnchoas = (Button)view.findViewById(R.id.buttonAnchoas);

@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -19,11 +18,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.Calendar;
-import java.util.Date;
 import asee.unex.es.pizzeriamilenio.R;
 
 
@@ -159,7 +155,6 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
 
     private static void setDateString(int year, int monthOfYear, int dayOfMonth) {
 
-        // Increment monthOfYear for Calendar/Date -> Time Format setting
         monthOfYear++;
         String mon = "" + monthOfYear;
         String day = "" + dayOfMonth;
@@ -196,7 +191,6 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
             int month = c.get(Calendar.MONTH);
             int day = c.get(Calendar.DAY_OF_MONTH);
 
-            // Create a new instance of DatePickerDialog and return it
             return new DatePickerDialog(getActivity(), this, year, month, day);
         }
 
@@ -216,12 +210,10 @@ public class Reserva extends AppCompatActivity implements View.OnClickListener {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-            // Use the current time as the default values for the picker
             final Calendar c = Calendar.getInstance();
             int hour = c.get(Calendar.HOUR_OF_DAY);
             int minute = c.get(Calendar.MINUTE);
 
-            // Create a new instance of TimePickerDialog and return
             return new TimePickerDialog(getActivity(), this, hour, minute,
                     true);
         }

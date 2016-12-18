@@ -70,7 +70,7 @@ public class AnularReserva extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent intentReserva = new Intent();
-                intentReserva.setClass(AnularReserva.this, MisReservas.class);  //cambiar
+                intentReserva.setClass(AnularReserva.this, MisReservas.class);
                 startActivity(intentReserva);
             }
         });

@@ -101,7 +101,7 @@ public class MisReservas extends AppCompatActivity {
         protected String doInBackground(String... params) {
 
             String cadena = params[0];
-            URL url = null; // Url de donde queremos obtener información
+            URL url = null;
             String devuelve ="";
 
             if (params[1] == "1") {    // obtenerReservas
@@ -116,13 +116,11 @@ public class MisReservas extends AppCompatActivity {
 
                     if (respuesta == HttpURLConnection.HTTP_OK){
 
-                        InputStream in = new BufferedInputStream(connection.getInputStream());  // preparo la cadena de entrada
-
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(in));  // la introduzco en un BufferedReader
-
+                        InputStream in = new BufferedInputStream(connection.getInputStream());
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                         String line;
                         while ((line = reader.readLine()) != null) {
-                            result.append(line);        // Paso toda la entrada al StringBuilder
+                            result.append(line);
                         }
 
                         JSONObject respuestaJSON = new JSONObject(result.toString());
@@ -203,5 +201,4 @@ public class MisReservas extends AppCompatActivity {
             return convertView;
         }
     }
-
 }
